@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cleo.manalili_le2.MainActivity2">
+
+    <Button
+        android:id="@+id/btn_internals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="displaymessage"
+        android:text="LOAD INTERNAL STORAGE"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_sharedp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOAD SHARED PREFERENCES"
+        android:onClick="loadInfo"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/btn_internals"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextActivity"
+        android:text="BACK"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/tv_display2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_internals"
+        android:layout_alignLeft="@+id/btn_internals"
+        android:layout_alignRight="@+id/btn_internals"
+        android:layout_alignStart="@+id/btn_internals"
+        android:layout_below="@+id/btn_sharedp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tv_display2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_display1"
+        android:layout_alignLeft="@+id/tv_display1"
+        android:layout_alignRight="@+id/tv_display1"
+        android:layout_alignStart="@+id/tv_display1"
+        android:layout_below="@+id/tv_display1"
+        android:layout_marginTop="23dp"
+        android:gravity="center"
+        android:text="" />
+
+</RelativeLayout>

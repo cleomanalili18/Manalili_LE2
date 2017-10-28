@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cleo.manalili_le2.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_uname"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:text="Username"
+        android:textSize="9pt"
+        android:layout_marginTop="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/tv_pword"
+        android:layout_alignStart="@+id/tv_pword"
+        android:layout_toLeftOf="@+id/btn_internal"
+        android:layout_toStartOf="@+id/btn_internal" />
+
+    <TextView
+        android:id="@+id/tv_pword"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:text="Password"
+        android:textSize="9pt"
+        app:layout_constraintRight_toLeftOf="@+id/et_uname"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tv_uname"
+        android:layout_toLeftOf="@+id/btn_shared"
+        android:layout_toStartOf="@+id/btn_shared" />
+
+    <EditText
+        android:id="@+id/et_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/tv_uname"
+        android:layout_alignBottom="@+id/tv_uname"
+        android:layout_toRightOf="@+id/tv_uname"
+        android:layout_toEndOf="@+id/tv_uname" />
+
+    <EditText
+        android:id="@+id/et_pword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="input password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_alignTop="@+id/tv_pword"
+        android:layout_alignLeft="@+id/et_uname"
+        android:layout_alignStart="@+id/et_uname" />
+
+
+    <Button
+        android:id="@+id/btn_shared"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shared Preferences"
+        android:onClick="saveInfo"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/et_pword"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_internal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="savemessage"
+        android:text="Internal Storage"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="214dp"
+        android:layout_below="@+id/btn_shared"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="nextActivity"
+        tools:layout_editor_absoluteY="214dp"
+        tools:layout_editor_absoluteX="135dp"
+        android:layout_below="@+id/btn_internal"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
